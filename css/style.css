@@ -1,0 +1,525 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Source Sans 3", serif;
+    padding: 0;
+    margin: 0;
+}
+a,
+span {
+    display: inline-block;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 80%;
+    margin-inline: auto;
+}
+
+
+/* start navbar */
+.home {
+    height: 100vh;
+    background-image: url(../images/hero\ img.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+.home::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 70%);
+    z-index: -1;
+}
+.home .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+.home .navbar .logo a {
+    color: #ff305b;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 18px 0;
+    text-decoration: underline;
+}
+.home .navbar .logo a:hover {
+    text-decoration: none;
+}
+.navbar .links ul {
+    display: flex;
+}
+.navbar .links ul li {
+    padding-left: 22px;
+}
+.navbar .links ul li a {
+    color: #fff;
+    transition: color 1s ;
+}
+.navbar .links ul li a.first {
+    color: #ff305b;
+
+}
+.navbar .links ul li a:hover {
+    color: #ff305b;
+}
+
+/* Start Home  */
+
+.home .text-home {
+    text-align: center;
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 200px;
+}
+.home .text-home p {
+    font-size: 26px;
+    text-transform: capitalize;
+    color: #fff;
+    margin: 0;
+}
+.home .text-home h1 {
+    color: #ff305b;
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Start about */
+
+.about {
+    height: 90vh;
+    padding-block: 150px;
+}
+.about .container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.about .about-portfolio {
+    width: 30%;
+    border:8px solid #555555;
+    border-radius: 8px;
+    height: 365px;     /* هندسه لو محطتش الارتفاع دا الشكل مش هيبقي قد الصوره وبس هيبقي 
+                 الارتفاع بارتفاع الاب ال هو طويل اوي انا حليته بالشكل دا بس حاسه مش صح */
+                /* مع اني جربت طريقه الافتر وبرضو نفس حوار الارتفاع  ف قولت اجرب الطريقه دي انهم يبقو اتنين ديف */
+}
+.about .about-portfolio .image {
+    position: relative;
+    left: 25px;
+    top: 25px;
+}
+.about .image img {
+    width: 100%;
+    border-radius: 8px;
+}
+.about .about-text {
+    width: 50%;
+}
+.about .about-text h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 25px;
+    padding-left: 13px;
+    position: relative;
+    text-transform: uppercase;
+}
+.about .about-text h2::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 50%;
+    background-color: #ff305b;
+    left: 0px;
+    top: 10px;
+}
+.about .about-text > p {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px dashed #999999;
+    color: #555555;
+}
+.about .about-text .about-profile {
+    margin-bottom: 50px;
+}
+.about .about-text .about-profile .title {
+    display: flex;
+    align-items: center;
+}
+.about .about-text .about-profile .title h4 {
+    width:300px;
+    margin: 20px 0 0 0;
+    color: #7e7e7e;
+    font-size: 14px;
+}
+.about .about-text .about-profile .title h4 span {
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.about .about-text .cv a{
+    background-color: #ff305b;
+    border-radius: 4px;
+    color: #ffffff;
+    margin-right: 30px;
+    padding: 11px 29px;
+    transition: background-color 0.3s;
+}
+.about .about-text .cv a:hover{
+    background-color: #b80428;
+}
+
+/* start services */
+
+.services {
+    background-color: #f1f1f1;
+    /* height: 70vh; */
+    padding-block: 100px 70px;
+    
+}
+
+/* all section main title in website  */
+.mainsection h2 {
+    width: fit-content;
+    color: #333;
+    margin: 0 auto 40px;
+    font-size: 42px;
+    font-weight: 800;
+    position: relative;
+    text-transform: capitalize;
+}
+.mainsection h2::before {
+    content: "";
+    position: absolute;
+    background-color: #ff305b;
+    width: 160px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -6px;
+    height: 1px;
+}
+.mainsection h2::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -10px;
+    border-block: 1px solid #ff305b;
+}
+/* ///////////////////////////////////////// */
+
+.services .ser-cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 60px;
+}
+.services .ser-cards .card {
+    text-align: center;
+    padding: 40px 2px ;
+    transition: background-color.5s ease-in ,box-shadow .5s ease-in;
+}
+.services .ser-cards .card i {
+    color: #ff305b;
+    display: block;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.services .ser-cards .card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.services .ser-cards .card p {
+    color: #555555;
+    margin: 0;
+}
+.services .ser-cards .card:hover{
+    background-color: #ffffff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Start portfolio */
+
+.portfolio {
+    padding-block: 100px 70px;
+}
+
+.portfolio .portfolio-images {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 25px;
+}
+.portfolio .portfolio-images .image img {
+    width: 100%;
+}
+.portfolio .portfolio-images .image {
+    position: relative;
+}
+.portfolio .portfolio-images .image::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000000;
+    transition: background-color .2s ease-in;
+}
+.portfolio .portfolio-images .image:hover::after{
+    background-color: #000000a1;
+    transition: background-color .5s ease-in;
+}
+
+/* Start team-number */
+
+.team-number {
+    background-color:#f1f1f1 ;
+    padding-block: 120px 70px;
+}
+.team-number .container {
+    display: flex;
+    gap: 50px;
+}
+.team-number .card {
+    text-align: center;
+    width: 35%;
+}
+.team-number .card i {
+    color: #ff305b;
+    font-size: 26px;
+    display: block;
+    margin-bottom: 10px;
+}
+.team-number .card h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0;
+}
+.team-number .card p {
+    color: #555555;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Start testimonial */
+
+.testimonial {
+    padding-block: 100px;
+}
+.testimonial .box {
+    width: 60%;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    margin: 40px auto 0;
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+/* .testimonial .box::after {
+    content: "";
+    position: absolute;
+    background-color: #ff305b;
+    width: 240px;
+    height: 300px;
+    left: -115px;
+    top: -140px;
+    transform: rotate(40deg);
+    z-index: 1;
+}  */
+             /* طريقه تانيه */
+.testimonial .box::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-width: 100px;
+    border-color: #ff305b transparent transparent #ff305b;
+    border-style: solid;
+} 
+.testimonial .box .image {
+    width:250px;
+}
+.testimonial .box .image img {
+    width: 100%;
+    border-radius: 50%;
+    z-index: 99;
+    position: relative;
+}
+.testimonial .box .text h3 {
+    font-size: 26px;
+    margin:0 0 10px;
+}
+.testimonial .box .text .addres {
+    color: #777777;
+    font-size: 15px;
+}
+.testimonial .box .text p {
+    font-size: 16px;
+    font-style: italic;
+}
+.testimonial .box .text .stars i {
+    color: #f1c30d;
+    margin-bottom: 12px;
+}
+
+/* Start Blog  */
+.blog {
+    background-color:#f1f1f1 ;
+    padding-block: 120px 70px;
+}
+.blog .blog-cards {
+    display: flex;
+    gap: 50px;
+    margin-top: 60px;
+}
+.blog .blog-cards .card {
+    background: #fff;
+}
+.blog .blog-cards .card .image img , .card iframe {
+    width: 100%;
+    height: 240px;
+}
+.blog .blog-cards .card .text {
+    padding: 20px;
+    color: #555555
+}
+.blog .blog-cards .card .text span {
+    margin-bottom: 10px;
+}
+.blog .blog-cards .card .text h3 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+.blog .blog-cards .card .text h3 a{
+    color: #333333;
+    text-transform: capitalize;
+}
+.blog .blog-cards .card .text p {
+    margin: 0 0 15px;
+}
+.blog .blog-cards .card .text a {
+    text-transform: capitalize;
+    color: #333333;
+}
+.blog .blog-cards .card .text a > i {
+    color: #333333;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.blog .blog-cards .card .text a:hover ,
+.blog .blog-cards .card .text a:hover i {
+    color: #ff305b;
+    transition: color .5s ease-in;
+}
+
+/* start contact */
+.contact .container {
+    width: 60%;
+    padding-block: 100px 70px;
+}
+.contact input ,
+textarea {
+    height: 40px;
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-size: 14px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .075);
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: 0;
+}
+.contact .rowone {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+.contact .rowone input {
+    width: 50%;
+}
+.contact input.subject {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.contact textarea {
+    width: 100%;
+    margin-bottom: 30px;
+    height: 120px;
+}
+.contact input[type="submit"] {
+    display: block;
+    background-color: #ff305b;
+    border-color: #ff305b;
+    color: #fff;
+    padding: 0 20px;
+    height: 40px;
+    text-transform: uppercase;
+}
+
+/* Start footer  */
+
+.footer {
+    background-color: #333333;
+    padding: 50px 0;
+    text-align: center;
+}
+.footer .container {
+    
+}
+.footer .container .row {
+    display: flex;
+    justify-content: center;
+}
+.footer .container .row > i {
+    display: block;
+    color: #ffffff;
+    height: 35px;
+    font-size: 18px;
+    padding: 0 10px;
+}
+.footer .container .row > i:hover {
+    color: #ff305b;
+    cursor: pointer;
+}
+.footer .container .row > p {
+    color: #ffffff;
+    margin: 0;
+}
+.footer .container .row > p a {
+    color: #ff305b;
+}
+.footer .container .row > p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
