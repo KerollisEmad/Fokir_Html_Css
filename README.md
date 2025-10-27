@@ -7,8 +7,3 @@ Showcases smooth layout, elegant design, and section-based navigation.
 💻 **Code:** [GitHub Repository](https://github.com/kerollisemad/Fokir_Html_Css)  
 
 ---
-
-### 🖼️ Preview
-<p align="center">
-  <img src="https://github.com/kerollisemad/Fokir_Html_Css/blob/main/preview.png" alt="Fokir Preview" width="700"/>
-</p>
